@@ -83,7 +83,7 @@ module Fontcustom
       Base.new(options.merge(:input => input)).compile
     rescue Fontcustom::Error => e
       say_status :error, e.message, :red
-      puts e.backtrace.join("\n") if options[:debug]
+      puts e.backtrace.join("\n") #if options[:debug]
       exit 1
     end
 
